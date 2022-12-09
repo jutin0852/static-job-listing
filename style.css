@@ -84,9 +84,12 @@ header{
 #one p{
     font-weight: bolder;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 #one p:hover{
     color:hsl(180, 29%, 50%) ;
+    transition: 0.2s;
+
 }
 .ago{
     margin-right: 10px;
@@ -102,10 +105,14 @@ header{
     font-size: 0.8em;
     font-weight: bold;
     margin-right: 10px;
+
 }
 .skills:hover{
     background-color:hsl(180, 29%, 50%) ;
     color: white;
+    transition: 0.5s;
+    cursor : pointer ;
+    
 }
 #skill{
     float: right;
@@ -127,5 +134,37 @@ header{
     box-shadow: 0px 3px 20px -7px  hsl(180, 29%, 50%);
     position: relative;
     top: -30px;
+    padding: 15px 30px;
+    box-sizing: border-box;
 
+}
+.tag{
+    color:hsl(180, 29%, 50%) ;
+    border-radius: 5px;
+    padding: 4.5px 8px;
+    background-color:hsl(180, 31%, 95%) ;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+}
+.remove{
+    background-color:hsl(180, 29%, 50%) ;
+    width: 9px;
+    height: 10px;
+    margin: 0;
+    padding: 6px;
+    position: relative;
+    top: 6.7px;
+    right: -10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+}
+.remove:hover{
+    background-color:black ;
+    transition: 0.5s;
+}
+.inactive{
+    display: none;
 }
