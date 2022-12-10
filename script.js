@@ -1,7 +1,9 @@
 var back=document.getElementById('back');
 var back1=document.getElementById('back1');
 let filterPath=document.getElementById('select'); 
-filterPath.style.visibility='hidden';
+let clearbox=document.getElementById('clearbox'); 
+clearbox.style.visibility='hidden';
+
 
 const getSomething = async () => {
  const response = await fetch('data.json');
@@ -29,7 +31,7 @@ const getSomething = async () => {
           <span id="featured">featured</span>
         </div> 
         <p>${file[x].position}</p> 
-        <div>  
+        <div id='time'>  
           <span class="ago">${file[x].postedAt}</span>
           <span class="ago">${file[x].contract}</span> 
           <span class="ago">${file[x].location}</span>
@@ -102,7 +104,8 @@ const getSomething = async () => {
       }
     }
   if(event.target.className=='skills'){
-    filterPath.style.visibility='visible';
+    // filterPath.style.visibility='visible';
+    clearbox.style.visibility='visible';
     if(filterPath.textContent.includes(event.target.textContent)){
 
       let c=event.target.textContent;
@@ -113,10 +116,11 @@ const getSomething = async () => {
       eachArr = arr.map( a => {
         return `<span class="tag">${a}<img class="remove" src="/images/icon-remove.svg" alt=""></span> `
       }).join('');
-      filterPath.innerHTML =`<span id="clear">Clear</span> ${eachArr}` 
+      filterPath.innerHTML =eachArr
       filterList();
       if(arr==''){
-        filterPath.style.visibility='hidden'
+        // filterPath.style.visibility='hidden'
+        clearbox.style.visibility='hidden';
 
       }
       }
@@ -126,7 +130,7 @@ const getSomething = async () => {
           eachArr=arr.map( a => {
           return `<span class="tag">${a}<img class="remove" src="/images/icon-remove.svg" alt=""></span> `
         }).join('')
-        filterPath.innerHTML = `<span id="clear">Clear</span> ${eachArr}` ;
+        filterPath.innerHTML = eachArr ;
          filterList()
       }
     }
@@ -138,8 +142,8 @@ if(event.target.id=='clear'){
   eachArr = arr.map( a => {
     return `<span class="tag">${a}<img class="remove" src="/images/icon-remove.svg" alt=""></span> `
   }).join('')
-  filterPath.innerHTML = `<span id="clear">Clear</span> ${eachArr}` ;
-  filterPath.style.visibility='hidden'
+  filterPath.innerHTML = eachArr ;
+  clearbox.style.visibility='hidden';
 
   filterList();
 }
@@ -156,7 +160,7 @@ if(event.target.id=='clear'){
       eachArr = arr.map( a => {
         return `<span class="tag">${a}<img class="remove" src="/images/icon-remove.svg" alt=""></span> `
       }).join('')
-      filterPath.innerHTML = `<span id="clear">Clear</span> ${eachArr}` ;
+      filterPath.innerHTML = eachArr ;
       filterList();
       if(arr==''){
         filterPath.style.visibility='hidden'

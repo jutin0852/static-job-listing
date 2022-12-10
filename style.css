@@ -4,7 +4,198 @@
     font-family: "League Spartan",sans-serif;
 
 }
-
+@media screen and (min-width:300px) {
+   
+    body{
+       min-height: 745px;
+       width: 100%;
+       /* background-color: hsl(180, 52%, 96%); */
+    
+       
+    }
+    header{
+        background-image:url(/images/bg-header-desktop.svg) ;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 150px;
+        background-color:hsl(180, 29%, 50%);
+    
+    }
+    #back{
+        background-color: hsl(180, 52%, 96%);
+        min-height: 595px;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        /* padding-top: 30px; */
+    
+    }
+    #back1{
+        background-color: hsl(180, 52%, 96%);
+        /* min-height: 595px; */
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    #one{
+        /* display: block; */
+        /* align-items: center; */
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 80%;
+       min-height: 150px;
+        background-color: white;
+        box-shadow: 0px 3px 20px -7px  hsl(180, 29%, 50%);
+        border-radius: 5px;
+        padding: 40px 30px 10px 30px;
+        box-sizing: border-box;
+        position: relative;
+        
+    }
+    #snap{
+        float: left;
+        padding-right: 30px;
+        position: absolute;
+        top:-30px;
+        width: 3.5em;
+    }
+    #photo{
+        color:hsl(180, 29%, 50%) ;
+        font-weight: bolder;
+        font-size: 0.9em;
+    }
+    .new{
+        background-color:hsl(180, 29%, 50%) ;
+        border-radius: 20px;
+        margin: 0 5px 0 10px;
+        padding: 1px 5px;
+        font-size: 0.9em;
+        color: white;
+        /* display: none; */
+    }
+    #featured{
+      
+            background-color:black ;
+            border-radius: 20px;
+            padding: 1px 5px;
+            font-size: 0.9em;
+            color: white;
+        
+    }
+    #top{
+        margin-bottom: 10px ;
+    }
+    #one p{
+        font-weight: bolder;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    #one p:hover{
+        color:hsl(180, 29%, 50%) ;
+        transition: 0.2s;
+    }
+    .ago{
+        margin-right: 10px;
+        font-size: 0.9em;
+        color: hsl(180, 8%, 52%);
+        
+    }
+    .skills{
+        color:hsl(180, 29%, 50%) ;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color:hsl(180, 31%, 95%) ;
+        font-size: 0.8em;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0px 10px 10px 0px;
+    
+    }
+    .skills:hover{
+        background-color:hsl(180, 29%, 50%) ;
+        color: white;
+        transition: 0.5s;
+        cursor : pointer ;
+        
+    }
+    #skill{
+        float: none;
+        /* height: 100px; */
+        margin: 15px 0px 0px 0px;
+    }
+    #all{
+        float: none;
+    }
+    .gone{
+        display: none;
+    }
+   
+    #clearbox{
+        width: 80%;
+        min-height: 60px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 3px 20px -7px  hsl(180, 29%, 50%);
+        position: relative;
+        top: -30px;
+        padding: 15px 30px;
+        box-sizing: border-box;
+    }
+    .tag{
+        color:hsl(180, 29%, 50%) ;
+        border-radius: 5px;
+        padding: 7px 30px 7px 10px;
+        background-color:hsl(180, 31%, 95%) ;
+        font-size: 0.8em;
+        font-weight: bold;
+        margin: 5px 10px 5px 0px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+    
+    }
+    .remove{
+        background-color:hsl(180, 29%, 50%) ;
+        width: 9px;
+        height: 11px;
+        margin: 0;
+        padding: 7.5px;
+        position: absolute;
+        top: 1px;
+        right: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+       
+    }
+    .remove:hover{
+        background-color:black ;
+        transition: 0.5s;
+    }
+    .inactive{
+        display: none;
+    }
+    #clear{
+        color:hsl(180, 29%, 50%);
+        float: right;
+        padding-top:5px ;
+        padding-bottom: -2px;
+        font-weight: bold;
+        font-size: 0.9em;
+        cursor: pointer;
+    }
+    #clear:hover{
+       border-bottom: 2px solid;
+      
+    }
+    #time::after{
+        content: "";
+        display: block;
+        border-bottom: 1px solid  hsl(180, 8%, 52%);
+        margin: 10px 0px;
+    }
+}
 
 @media screen and (min-width:1120px) {
    
@@ -44,9 +235,10 @@
     #one{
         /* display: block; */
         /* align-items: center; */
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: 80%;
-        height: 150px;
+        min-height: 150px;
         background-color: white;
         box-shadow: 0px 3px 20px -7px  hsl(180, 29%, 50%);
         border-radius: 5px;
@@ -57,6 +249,9 @@
     #snap{
         float: left;
         padding-right: 30px;
+        position: unset;
+        top:unset;
+        width: unset;
     }
     #photo{
         color:hsl(180, 29%, 50%) ;
@@ -108,7 +303,7 @@
         background-color:hsl(180, 31%, 95%) ;
         font-size: 0.8em;
         font-weight: bold;
-        margin-right: 10px;
+        margin: 0px 10px 0px 0px;
     
     }
     .skills:hover{
@@ -130,9 +325,9 @@
     .gone{
         display: none;
     }
-    #select{
+    #clearbox{
         width: 80%;
-        height: 60px;
+        min-height: 60px;
         background-color: white;
         border-radius: 5px;
         box-shadow: 0px 3px 20px -7px  hsl(180, 29%, 50%);
@@ -145,22 +340,26 @@
     .tag{
         color:hsl(180, 29%, 50%) ;
         border-radius: 5px;
-        padding: 4.5px 8px;
+        padding: 7px 30px 7px 10px;
         background-color:hsl(180, 31%, 95%) ;
         font-size: 0.8em;
         font-weight: bold;
-        margin-right: 10px;
+        margin: 5px 10px 5px 0px;
+        
         text-align: center;
+        position: relative;
+        display: inline-block;
+    
     }
     .remove{
         background-color:hsl(180, 29%, 50%) ;
         width: 9px;
-        height: 10px;
+        height: 11px;
         margin: 0;
-        padding: 6px;
-        position: relative;
-        top: 6.7px;
-        right: -10px;
+        padding: 7.5px;
+        position: absolute;
+        top: 1px;
+        right: 0px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
        
@@ -184,5 +383,11 @@
     #clear:hover{
        border-bottom: 2px solid;
       
+    }
+    #time::after{
+        content: "";
+        display: none;
+        border-bottom: 1px solid  hsl(180, 8%, 52%);
+        margin: 10px 0px;
     }
 }
